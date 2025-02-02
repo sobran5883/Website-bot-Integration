@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import success from "../../assets/success.png";
-// import styles from "./styles.module.css";
-// import { Fragment } from "react/cjs/react.production.min";
 import { Fragment } from "react";
 
 
@@ -14,7 +12,8 @@ const EmailVerify = () => {
 	useEffect(() => {
 		const verifyEmailUrl = async () => {
 			try {
-				const url = `http://localhost:8080/api/users/${param.id}/verify/${param.token}`;
+				// const url = `http://localhost:8080/api/users/${param.id}/verify/${param.token}`;
+				const url = `https://website-bot-integration.onrender.com/api/users/${param.id}/verify/${param.token}`;
 				const { data } = await axios.get(url);
 				console.log(data);
 				setValidUrl(true);

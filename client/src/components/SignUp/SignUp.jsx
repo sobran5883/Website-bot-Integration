@@ -46,7 +46,8 @@ const SignUp = () => {
 
     if (Object.keys(errorObj).length === 0) {
       try {
-        const url = "http://localhost:8080/api/users";
+        // const url = "http://localhost:8080/api/users";
+        const url = "https://website-bot-integration.onrender.com/api/users";
         const { data: res } = await axios.post(url, {
           firstName: formData.username, // Map username to firstName
           email: formData.email,
