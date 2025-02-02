@@ -3,7 +3,7 @@ import User from "../models/user.js";
 import Token from "../models/token.js";
 import crypto from "crypto";
 import sendEmail from "../utils/sendEmail.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import Joi from "joi";
 
 const router = express.Router();
