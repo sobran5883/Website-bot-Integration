@@ -15,6 +15,7 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [formErrors, setFormErrors] = useState({});
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,6 +23,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
     const errorObj = {};
 
     if (!formData.email) {
@@ -48,6 +50,7 @@ const Login = () => {
         }
       }
     }
+    setLoading(false)
   };
 
   const inputClasses = (field) =>
@@ -102,7 +105,7 @@ const Login = () => {
                 <Link to='/signup' className="text-blue-500">Sign Up</Link>
               </div>
               <button type="submit" className="bg-primary hover:bg-secondary px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white">
-                Sign In
+                {loading?"Loading..":"Sign In"}
               </button>
             </div>
           </form>

@@ -30,7 +30,7 @@ const App = () => {
               <Route path="login" element={<Login />} />
               <Route path="*" element={<Navigate to="/login" replace />} />
               <Route path="signup" element={<SignUp />} />
-              <Route path="users/:id/verify/:token" element={<EmailVerify />} />
+              <Route path="api/users/:id/verify/:token" element={<EmailVerify />} />
             </Route>
           </>
         )}

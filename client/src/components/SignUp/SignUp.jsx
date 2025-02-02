@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+
 const isValidEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -34,6 +35,7 @@ const SignUp = () => {
   const [formErrors, setFormErrors] = useState({});
   const [msg, setMsg] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -41,6 +43,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
     const errorObj = validateData(formData);
     setFormErrors(errorObj);
 
@@ -62,6 +65,7 @@ const SignUp = () => {
         }
       }
     }
+    setLoading(false)
   };
 
   const inputClasses = (field) =>
@@ -114,7 +118,7 @@ const SignUp = () => {
                 <Link to='/Login' className="text-blue-500">Login</Link>
               </div>
               <button type="submit" className="bg-primary hover:bg-secondary px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white">
-                Sign Up
+                {loading? "Sending...":"Sign Up"}
               </button>
             </div>
           </form>
