@@ -221,7 +221,7 @@ function Get() {
                     className="fixed bottom-16 right-5 bg-primary hover:bg-secondary text-white py-2 px-6 rounded-full flex items-center space-x-2 shadow-lg"
                   >
                     <MessageSquare className="w-5 h-5" />
-                    <span>Chatbot integration & testing</span>
+                    <span className="hidden md:block">Chatbot integration & testing</span>
                   </motion.button>
                 </div>
                 </NavLink>
