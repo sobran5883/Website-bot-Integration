@@ -60,11 +60,18 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link to='/login'>
-              <button className="hidden lg:block border-2 px-6 rounded-sm py-1 border-primary hover:text-primary hover:scale-[1.05] transition-all ease-in-out duration-300">
-                Login
+            <div className="flex gap-4">
+              <Link to="/get">
+              <button className="hidden min-w-[110px] lg:block border-2 py-1 rounded-sm border-primary hover:text-primary hover:scale-[1.05] transition-all ease-in-out duration-300">
+                Demo
               </button>
-            </Link> 
+              </Link>
+              <Link to='/login'>
+                <button className="hidden lg:block border-2 px-6 rounded-sm py-1 border-primary hover:text-primary hover:scale-[1.05] transition-all ease-in-out duration-300">
+                  Login
+                </button>
+              </Link> 
+            </div>
           )
         }
 

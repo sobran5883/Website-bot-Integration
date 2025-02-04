@@ -27,6 +27,7 @@ const App = () => {
           <>
             <Route path="/" element={<Layout />}>
               <Route index element={<Login />} />
+              <Route path="/get" element={<Get />}/>
               <Route path="login" element={<Login />} />
               <Route path="*" element={<Navigate to="/login" replace />} />
               <Route path="signup" element={<SignUp />} />
