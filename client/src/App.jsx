@@ -26,7 +26,7 @@ const App = () => {
         ) : (
           <>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Login />} />
+              <Route index element={<Home />} />
               <Route path="/get" element={<Get />}/>
               <Route path="login" element={<Login />} />
               <Route path="*" element={<Navigate to="/login" replace />} />

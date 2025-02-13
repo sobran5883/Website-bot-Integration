@@ -66,12 +66,12 @@ const Login = () => {
     <GoogleOAuthProvider clientId="796919939344-75jvmtl5igl3m6vb75or4k3efqsdhu6l.apps.googleusercontent.com">
       <div className="py-28 bg-[#f7f7f7] h-screen flex items-center justify-center">
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="container">
-          <div className="max-w-md mx-auto p-4 flex flex-col justify-center items-center">
+          <div className="w-full max-w-md mx-auto p-4 flex flex-col justify-center items-center">
             <div className="my-10">
               <div className="text-primary text-xl font-semibold px-4 py-1">Log<span className="text-secondary">In</span></div>
             </div>
             <div className="mt-6 text-center w-full">
-              <GoogleLogin onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
+              <GoogleLogin  onSuccess={handleGoogleSuccess} onError={handleGoogleError} />
             </div>
             <div className="text- font-semibold my-2">
               <h1>Or</h1>
